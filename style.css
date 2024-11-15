@@ -1,0 +1,145 @@
+/* se importan las fuentes a utilizar */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Rammetto+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani';
+    background: url(img/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#pantalla-inicial {
+    display: block;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    background: rgb(255, 255, 255, .7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+#pantalla-inicial h1 {
+    font-family: 'Rammetto One';
+    font-size: 50px;
+    color: #5972d9;
+}
+
+button {
+    background: #c566fc;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 30px;
+    border-bottom: 4px solid #4b0872;
+}
+
+button:hover {
+    border-bottom: 4px solid transparent;
+    background-color: #7705b9;
+}
+
+/* seccion pantalla del juego */
+#pantalla-juego {
+    display: none;
+}
+
+/* esta clase se agrega dinamicamente */
+.pregunta-actual {
+    background-color: #000;
+    color: #fff;
+}
+
+/* esta clase se agrega dinamicamente cuando se haya respondido bien la pregunta*/
+.bien-respondida {
+    background-color: #3edbbb;
+    color: #fff;
+}
+
+/* esta clase se agrega dinamicamente cuando se haya respondido mal la pregunta*/
+.bien-respondida {
+    background-color: #fb797b;
+    color: #fff;
+}
+
+.contenedor-pregunta {
+    background-color: rgb(255, 255, 255, .7);
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.contenedor-pregunta #pregunta {
+    margin: 0;
+    font-weight: normal;
+}
+
+.contenedor-pregunta input {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    border: 2px solid #ccc;
+}
+
+.contenedor-pregunta #letra-pregunta {
+    border: 2px solid #000;
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 30px;
+    position: relative;
+    bottom: 25px;
+    background: #fff;
+}
+
+.container {
+    position: relative;
+    width: 255px;
+    height: 255px;
+    margin: 50px auto;
+    border: 2pz solid #000;
+    border-radius: 50%;
+    background: rgb(255, 255, 255, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container #tiempo {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* la siguiente clase es para los circulos de cada letra */
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #5972d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
