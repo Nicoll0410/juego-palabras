@@ -1,6 +1,14 @@
 //total de pregunta del juego
 const totalPreguntas = 10
 
+//variable que controla la pregunta actual, comienza en -1, porque la primera pregunta es la 0
+var numPreguntaActual = -1
+
+//voy a necesitar una estructura para saber que pregunta se ha respondido y cual no
+//se mantendra en un arreglo, i : 0 indica que no se ha respondido, 1 que si
+//coloco la cantidad de preguntas que hay, en este caso 10
+var estadoPreguntas = [0,0,0,0,0,0,0,0,0,0]
+
 //creamos la base de datos de preguntas
 const bdJuego = [
     {
@@ -87,6 +95,7 @@ comenzar.addEventListener("click", function(event) {
 
     //largamos el tiempo
     largarTiempo()
+    cargarPregunta()
 })
 
 function largarTiempo() {
@@ -103,3 +112,46 @@ function largarTiempo() {
         }
     }, 1000)
 }
+
+//funcion que carga la pregunta
+function cargarPregunta() {
+    numPreguntaActual++
+    //controlo si he llegado al final de las preguntas, para inciar de nuevo
+    if (numPreguntaActual >= totalPreguntas) {
+        numPreguntaActual = 0
+    }
+    //debo controlar que todavia hallan preguntas para contestar
+    //es decir, si en el arreglo estadoPregutnas existe algun 0
+    if (estadoPreguntas.indexOf(0) >= 0) {
+        //aahora debo buscar cual de tosas es la que esta sin responder, es decir buscar el
+        //primer 0 del arreglo
+        while (estadoPreguntas[numPreguntaActual] == 1) {
+            numPreguntaActual++
+            if (numPreguntaActual >= totalPreguntas) {
+                numPreguntaActual
+            }
+        }
+
+        //ahora si busco la pregunto en la bd de las preguntas
+        document.getElementById("letra-pregunta").textContent = bdJuego[numPreguntaActual].id
+        document.getElementById("pregunta").textContent = bdJuego[numPreguntaActual].pregunta
+        var letra = bdJuego[numPreguntaActual].id
+        document.getElementById(letra).classList.add("pregunta-actual")
+    } else {
+        //significa que ya se han respondido todas las preguntas
+        clearInterval(countdown)
+        //mostrarPantallaFinal()
+    }
+}
+
+//detectamos cada vez que haya un cambio en el input para ver cuando se presiona ENTER
+//y controlar si lo que ingreso es correcto o no
+var respuesta = document.getElementById("respuesta")
+respuesta.addEventListener("keyup", function(event) {
+    //detecto si presiono enter
+    if (event.keyCode === 13) {
+        if (respuesta.value="") {
+            alert("Debe ingresar un valor")
+        }
+    }
+})
