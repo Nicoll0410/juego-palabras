@@ -1,6 +1,14 @@
 //total de pregunta del juego
-
 const totalPreguntas = 10
+
+//variables para controlar el tiempo
+const timer = document.getElementById("tiempo")
+//Tiempo del juego en segundos
+const tiempoJuego = 60
+//variable que indica el tiempo restante
+let timeLeft = tiempoJuego
+//variable que maneja el contador
+var countdown
 
 //creamos las letras de la A a la J de forma circular
 const container = document.querySelector(".container")
@@ -24,4 +32,20 @@ comenzar.addEventListener("click", function(event) {
     document.getElementById("pantalla-juego").style.display = "block"
 
     //largamos el tiempo
+    largarTiempo()
 })
+
+function largarTiempo() {
+    countdown = setInterval(() => {
+        //restar un segundo al tiempo restante
+        timeLeft--
+        //actualizamos el texto de cronometro con el tiempo restante
+        timer.innerText = timeLeft
+        //si el tiempo llega a 0, detener el cronometro
+        if (timeLeft < 0) {
+            clearInterval(countdown)
+            // alert('Se acabo el tiempo')
+            //mostrarPantallaFinal()
+        }
+    }, 1000)
+}
