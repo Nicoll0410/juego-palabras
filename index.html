@@ -8,6 +8,28 @@
     <title>Juego de Palabras</title>
 </head>
 <body>
+    <section id="pantalla-inicial">
+        <h1>PASAPALABRAS</h1>
+        <button id="comenzar">COMENZAR JUEGO</button>
+    </section>
+
+    <!-- seccion del juego -->
+    <section id="pantalla-juego">
+        <!-- aqui se generara de forma dinamica las letras -->
+        <div class="container">
+            <span id="tiempo">60</span>
+        </div>
+
+        <div class="contenedor-pregunta">
+            <span id="letra-pregunta">Z</span>
+            <h2 id="pregunta">Esta es la pregunta...</h2>
+            <input type="text" id="respuesta">
+            <div class="botones">
+                <button id="responder">Responder</button>
+                <button id="pasar">Pasar Palabra</button>
+            </div>
+        </div>
+    </section>
     <script src="/script.js"></script>
 </body>
 </html>
