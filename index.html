@@ -2,34 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/puzzle.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Juego de Palabras</title>
+    <link rel="shortcut icon" href="/img/puzzle.png" type="image/x-icon">
+    <title>PasaPalabras</title>
 </head>
 <body>
     <section id="pantalla-inicial">
-        <h1>PASAPALABRAS</h1>
+        <h1>PASAPALABRA</h1>
         <button id="comenzar">COMENZAR JUEGO</button>
     </section>
-
-    <!-- seccion del juego -->
     <section id="pantalla-juego">
-        <!-- aqui se generara de forma dinamica las letras -->
         <div class="container">
             <span id="tiempo">60</span>
         </div>
 
-        <div class="contenedor-pregunta">
+        <div class="contendor-pregunta">
             <span id="letra-pregunta">Z</span>
-            <h2 id="pregunta">Esta es la pregunta...</h2>
+            <h2 id="pregunta">Pregunta...</h2>
             <input type="text" id="respuesta">
             <div class="botones">
-                <button id="responder">Responder</button>
-                <button id="pasar">Pasar Palabra</button>
+                <button id="pasar">Pasa Palabra</button>
             </div>
         </div>
     </section>
-    <script src="/script.js"></script>
+    <section id="pantalla-final">
+        <h1>Resumen</h1>
+        <h3>Acertadas</h3>
+        <span id="acertadas">
+            10
+        </span>
+        <h3 id="score">40% de acierto</h3>
+        <button id="recomenzar">Jugar de Nuevo</button>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
