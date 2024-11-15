@@ -1,6 +1,60 @@
 //total de pregunta del juego
 const totalPreguntas = 10
 
+//creamos la base de datos de preguntas
+const bdJuego = [
+    {
+        id: 'A',
+        pregunta: '¿Qué insecto produce miel?',
+        respuesta: 'Abeja'
+    },
+    {
+        id: 'B',
+        pregunta: '¿Qué animal tiene una gran cola y vive en el agua?',
+        respuesta: 'Ballena'
+    },
+    {
+        id: 'C',
+        pregunta: '¿Cómo se llama el color que es mezcla de rojo y blanco?',
+        respuesta: 'Crema'
+    },
+    {
+        id: 'D',
+        pregunta: '¿Cómo se llama el continente donde se encuentra Australia?',
+        respuesta: 'Oceania'
+    },
+    {
+        id: 'E',
+        pregunta: '¿Qué animal tiene una trompa larga y grandes orejas?',
+        respuesta: 'Elefante'
+    },
+    {
+        id: 'F',
+        pregunta: '¿Qué instrumento musical tiene teclas y se toca con las manos?',
+        respuesta: 'Flauta'
+    },
+    {
+        id: 'G',
+        pregunta: '¿Qué instrumento musical de cuerdas es pequeño y se toca con los dedos?',
+        respuesta: 'Guitarra'
+    },
+    {
+        id: 'H',
+        pregunta: '¿Qué animal es conocido por sus saltos y orejas largas?',
+        respuesta: 'Hiena'
+    },
+    {
+        id: 'I',
+        pregunta: ' ¿Cómo se llama el sistema que permite la transmisión de información en las redes de computadoras?',
+        respuesta: 'Internet'
+    },
+    {
+        id: 'J',
+        pregunta: '¿Como se llama el animal que es muy grande y amarillo?',
+        respuesta: 'Jirafa'
+    },
+]
+
 //variables para controlar el tiempo
 const timer = document.getElementById("tiempo")
 //Tiempo del juego en segundos
