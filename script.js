@@ -18,8 +18,8 @@ const bdJuego = [
     },
     {
         id: 'C',
-        pregunta: '¿Cómo se llama el color que es mezcla de rojo y blanco?',
-        respuesta: 'crema'
+        pregunta: '¿Cómo se llama el color que es mezcla de amarillo, azul y rojo?',
+        respuesta: 'cafe'
     },
     {
         id: 'D',
@@ -38,12 +38,12 @@ const bdJuego = [
     },
     {
         id: 'G',
-        pregunta: '¿Qué instrumento musical de cuerdas es pequeño y se toca con los dedos?',
+        pregunta: '¿Qué instrumento musical de cuerdas es grande y se toca con los dedos?',
         respuesta: 'guitarra'
     },
     {
         id: 'H',
-        pregunta: '¿Qué animal es conocido por sus saltos y orejas largas?',
+        pregunta: '¿Qué animal es conocido por ser nocturno y por tener un buen oido y vision?',
         respuesta: 'hiena'
     },
     {
@@ -53,7 +53,7 @@ const bdJuego = [
     },
     {
         id: 'J',
-        pregunta: '¿Como se llama el animal que es muy grande y amarillo?',
+        pregunta: '¿Como se llama el animal que es muy alto y amarillo?',
         respuesta: 'jirafa'
     },
 ]
